@@ -13,12 +13,17 @@
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# define TRUE 1
+# define FALSE 0
+
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdint.h>
 # include <limits.h>
+# include <stdarg.h>
+# include <stdint.h>
 
 // Part1
+int				ft_isspace(char c);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
@@ -55,5 +60,18 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
+
+// libftprintf
+int				ft_printf(const char *fmt, ...);
+int				ft_println(const char *fmt, ...);
+ssize_t			ft_putchar(char c);
+ssize_t			ft_putstr(char *s);
+ssize_t			ft_putnbr(int n);
+ssize_t			ft_putnbr_ui(unsigned int u);
+ssize_t			ft_putptr(uintptr_t p);
+ssize_t			ft_puthex(unsigned long x, int is_lower);
+int				ft_isnum(char *s);
+char			ft_dec_to_lower_hex(unsigned int u);
+char			ft_dec_to_upper_hex(unsigned int u);
 
 #endif
