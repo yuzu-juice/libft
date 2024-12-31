@@ -18,7 +18,12 @@ int	ft_isnum(char *s)
 		return (FALSE);
 	if (*s != '-' && !ft_isdigit(*s))
 		return (FALSE);
-	s++;
+	if (*s == '-')
+	{
+		s++;
+		if (!*s)
+			return (FALSE);
+	}
 	while (*s)
 	{
 		if (!ft_isdigit(*s))
