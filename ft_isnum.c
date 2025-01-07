@@ -16,14 +16,10 @@ int	ft_isnum(char *s)
 {
 	if (!s)
 		return (FALSE);
-	if (*s != '-' && !ft_isdigit(*s))
-		return (FALSE);
 	if (*s == '-')
-	{
 		s++;
-		if (!*s)
-			return (FALSE);
-	}
+	if (*s == '\0')
+		return (FALSE);
 	while (*s)
 	{
 		if (!ft_isdigit(*s))
