@@ -43,7 +43,7 @@ size_t	ft_strncpy(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	if (dstsize == 0)
 		return (ft_strlen(src));
-	while (s[i] && i < dstsize - 1)
+	while (i < dstsize)
 	{
 		d[i] = s[i];
 		i++;
