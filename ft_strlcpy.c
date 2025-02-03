@@ -32,6 +32,25 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (ft_strlen(src));
 }
 
+size_t	ft_strncpy(char *dst, const char *src, size_t dstsize)
+{
+	char		*d;
+	const char	*s;
+	size_t		i;
+
+	d = dst;
+	s = src;
+	i = 0;
+	if (dstsize == 0)
+		return (ft_strlen(src));
+	while (s[i] && i < dstsize - 1)
+	{
+		d[i] = s[i];
+		i++;
+	}
+	return (ft_strlen(src));
+}
+
 // #include <string.h>
 // #include <stdio.h>
 // int	main()
