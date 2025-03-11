@@ -112,4 +112,3 @@ int	ft_println(const char *fmt, ...)
 	ft_printf("\n");
 	return (len);
 }
-

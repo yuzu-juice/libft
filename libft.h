@@ -35,7 +35,7 @@ void			ft_bzero(void *s, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
 size_t			ft_strlcpy(char *dst, const char *src, size_t dstsize);
-size_t	        ft_strncpy(char *dst, const char *src, size_t dstsize);
+size_t			ft_strncpy(char *dst, const char *src, size_t dstsize);
 size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 int				ft_toupper(int c);
 int				ft_tolower(int c);
@@ -46,6 +46,7 @@ void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 char			*ft_strnstr(const char *big, const char *little, size_t len);
 int				ft_atoi(const char *nptr);
+double			ft_atof(const char *nptr);
 void			*ft_calloc(size_t nmemb, size_t size);
 char			*ft_strdup(const char *s);
 
@@ -75,5 +76,8 @@ ssize_t			ft_puthex(unsigned long x, int is_lower);
 int				ft_isnum(char *s);
 char			ft_dec_to_lower_hex(unsigned int u);
 char			ft_dec_to_upper_hex(unsigned int u);
+
+// utils
+int				ft_pow(int base, int exp);
 
 #endif
