@@ -3,27 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 19:24:30 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/19 20:39:56 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+static size_t	ft_strncpy(char *dst, const char *src, size_t size);
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	char		*d;
 	const char	*s;
 	size_t		i;
 
+	if (size == 0 || dst == NULL)
+		return (ft_strlen(src));
+
 	d = dst;
 	s = src;
 	i = 0;
-	if (dstsize == 0)
-		return (ft_strlen(src));
-	while (s[i] && i < dstsize - 1)
+	while (s[i] && i < size - 1)
 	{
 		d[i] = s[i];
 		i++;
@@ -32,7 +35,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (ft_strlen(src));
 }
 
-size_t	ft_strncpy(char *dst, const char *src, size_t dstsize)
+static size_t	ft_strncpy(char *dst, const char *src, size_t size)
 {
 	char		*d;
 	const char	*s;
@@ -41,9 +44,9 @@ size_t	ft_strncpy(char *dst, const char *src, size_t dstsize)
 	d = dst;
 	s = src;
 	i = 0;
-	if (dstsize == 0)
+	if (size == 0)
 		return (ft_strlen(src));
-	while (i < dstsize)
+	while (i < size)
 	{
 		d[i] = s[i];
 		i++;
@@ -55,11 +58,24 @@ size_t	ft_strncpy(char *dst, const char *src, size_t dstsize)
 // #include <stdio.h>
 // int	main()
 // {
-// 	char	str1[] = "01234";
-// 	char	str2[] = "01234";
-// 	char	str_src[] = "9876543210";
+// 	char	src[] = "01234";
+// 	char	dst1[] = "9876543210";
 
-// 	strlcpy(str1, str_src, sizeof(str1));
-// 	ft_strlcpy(str2, str_src, sizeof(str2));
-// 	printf("%s, %s\n", str1, str2);
+// 	size_t ret = ft_strlcpy(dst1, src, strlen(src));
+// 	printf("%zu, %s\n", ret, dst1);
+
+// 	char	dst2[] = "9876543210";
+// 	ret = ft_strlcpy(dst2, src, 0);
+// 	printf("%zu, %s\n", ret, dst2);
+
+// 	char	dst3[] = "9876543210";
+// 	ret = ft_strlcpy(dst3, src, strlen(src) + 1);
+// 	printf("%zu, %s\n", ret, dst3);
+
+// 	char	dst4[] = "9876543210";
+// 	ret = ft_strlcpy(dst4, NULL, 0);
+// 	printf("%zu, %s\n", ret, dst4);
+
+// 	ret = ft_strlcpy(NULL, src, 0);
+// 	printf("%zu\n", ret);
 // }
