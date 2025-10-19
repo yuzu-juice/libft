@@ -3,63 +3,65 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:46:16 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/19 20:17:21 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char		*d;
-	const char	*s;
-	size_t		i;
+	unsigned char		*d;
+	const unsigned char	*s;
+	size_t				i;
 
-	d = dst;
+	if (n == 0 || dest == NULL || src == NULL || dest == src)
+		return (dest);
+	d = dest;
 	s = src;
 	i = 0;
 	if (d < s)
-	{
-		while (i < len)
-		{
-			d[i] = s[i];
-			i++;
-		}
-	}
+		ft_memcpy(d, s, n);
 	else if (d > s)
 	{
-		while (len > 0)
+		while (n > 0)
 		{
-			d[len - 1] = s[len - 1];
-			len--;
+			d[n - 1] = s[n - 1];
+			n--;
 		}
 	}
-	return (dst);
+	return (dest);
 }
 
 // #include <string.h>
 // #include <stdio.h>
 // int	main()
 // {
-// 	char	str1[] = "0123456789";
-// 	char	str2[] = "0123456789";
-//     printf("memmove: %s\n", memmove(str1, str1 + 3, 5));
-//     printf("ft_memmove: %s\n", ft_memmove(str2, str2 + 3, 5));
+// 	char	src1[] = "0123456789";
+// 	char	dest1_1[] = "9876543210";
+// 	char	dest1_2[] = "9876543210";
+// 	printf("memmove: %s, ", memmove(dest1_1, src1, 5));
+// 	printf("ft_memmove: %s\n", ft_memmove(dest1_2, src1, 5));
 
-//     char empty_str1[] = "";
-//     char empty_str2[] = "";
-//     printf("memmove with empty string: %s\n",
-//				memmove(empty_str1, empty_str1, 0));
-//     printf("ft_memmove with empty string: %s\n",
-//				ft_memmove(empty_str2, empty_str2, 0));
+//  	char src2[] = "0123456789";
+//     char dest2_1[] = "";
+//     char dest2_2[] = "";
+// 	printf("memmove: %s, ", memmove(dest2_1, src2, 5));
+// 	printf("ft_memmove: %s\n", ft_memmove(dest2_2, src2, 5));
 
-//     char *null_str1 = NULL;
-//     char *null_str2 = NULL;
-//     printf("memmove with NULL: %p\n",
-//				memmove(null_str1, null_str1, 5));
-//     printf("ft_memmove with NULL: %p\n",
-//				ft_memmove(null_str2, null_str2, 5));
+// 	char src3_1[] = "0123456789";
+// 	char src3_2[] = "0123456789";
+// 	printf("memmove: %s, ", memmove(src3_1 + 1, src3_1, 5));
+// 	printf("ft_memmove: %s\n", ft_memmove(src3_2 + 1, src3_2, 5));
+
+// 	char dest4[] = "aaa";
+// 	printf("ft_memmove: %s\n", ft_memmove(dest4, NULL, 5));
+
+// 	char src5[] = "aaa";
+// 	printf("ft_memmove: %s\n", ft_memmove(NULL, src5, 5));
+
+//     return 0;
 // }

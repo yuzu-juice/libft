@@ -6,7 +6,7 @@
 #    By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 11:11:26 by takitaga          #+#    #+#              #
-#    Updated: 2025/10/19 19:54:08 by takitaga         ###   ########.fr        #
+#    Updated: 2025/10/19 20:09:04 by takitaga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRCS	= ft_isalpha.c \
 		ft_memset.c \
 		ft_bzero.c \
 		ft_memcpy.c \
-		# ft_memmove.c \
+		ft_memmove.c \
 		# ft_strlcpy.c \
 		# ft_strlcat.c \
 		# ft_toupper.c \
@@ -61,7 +61,7 @@ SRCS	= ft_isalpha.c \
 OBJS	= $(SRCS:.c=.o)
 HEADERS	= libft.h
 CC		= cc
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -Wall -Wextra -Werror -std=c99
 
 all: $(NAME)
 
