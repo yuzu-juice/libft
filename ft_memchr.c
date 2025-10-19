@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 19:27:18 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/19 21:40:39 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	const unsigned char	*buf;
 	size_t				i;
 
+	if (s == NULL)
+		return (NULL);
 	buf = s;
 	i = 0;
 	while (i < n)
 	{
-		if (buf[i] == (unsigned char)c)
+		if (buf[i] == (const unsigned char)c)
 			return ((void *)&buf[i]);
 		i++;
 	}
@@ -37,16 +39,13 @@ void	*ft_memchr(const void *s, int c, size_t n)
 //     int c = 'o';
 
 //     printf("memchr: %p\n", memchr(str1, c, n));
-//     printf("ft_memchr: %p\n", ft_memchr(str1, c, n));
+//     printf("ft_memchr: %p\n\n", ft_memchr(str1, c, n));
 
 // 	c = 'a';
 //     printf("memchr: %p\n", memchr(str1, c, n));
-//     printf("ft_memchr: %p\n", ft_memchr(str1, c, n));
+//     printf("ft_memchr: %p\n\n", ft_memchr(str1, c, n));
 
-// 	const char *str2 = NULL;
-// 	c = 'a';
-//     printf("memchr: %p\n", memchr(str2, c, n));
-//     printf("ft_memchr: %p\n", ft_memchr(str2, c, n));
+//     printf("ft_memchr: %p\n", ft_memchr(NULL, c, n));
 
 //     return 0;
 // }

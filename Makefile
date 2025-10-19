@@ -6,7 +6,7 @@
 #    By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 11:11:26 by takitaga          #+#    #+#              #
-#    Updated: 2025/10/19 21:31:54 by takitaga         ###   ########.fr        #
+#    Updated: 2025/10/19 21:38:23 by takitaga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRCS	= ft_isalpha.c \
 		ft_strchr.c \
 		ft_strrchr.c \
 		ft_strncmp.c \
-		# ft_memchr.c \
+		ft_memchr.c \
 		# ft_memcmp.c \
 		# ft_strnstr.c \
 		# ft_atoi.c \
