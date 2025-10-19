@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 11:12:09 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/19 21:50:08 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,26 +44,27 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 //     const char *little = "world";
 //     size_t len = strlen(big);
 
-//     // Test case 1: Little string is found in big string
-//     printf("strnstr: %s\n", strnstr(big, little, len));
-//     printf("ft_strnstr: %s\n", ft_strnstr(big, little, len));
+//     printf("ft_strnstr: %s\n\n", ft_strnstr(big, little, len));
 
-//     // Test case 2: Little string is not found in big string
 //     big = "Hello, world!";
 //     little = "foo";
-//     printf("strnstr: %s\n", strnstr(big, little, len));
-//     printf("ft_strnstr: %s\n", ft_strnstr(big, little, len));
+//     printf("ft_strnstr: %s\n\n", ft_strnstr(big, little, len));
 
-//     // Test case 3: Little string is empty
 //     big = "Hello, world!";
 //     little = "";
-//     printf("strnstr: %s\n", strnstr(big, little, len));
-//     printf("ft_strnstr: %s\n", ft_strnstr(big, little, len));
+//     printf("ft_strnstr: %s\n\n", ft_strnstr(big, little, len));
 
 //     big = "";
 //     little = "";
-//     printf("strnstr: %s\n", strnstr(big, little, len));
-//     printf("ft_strnstr: %s\n", ft_strnstr(big, little, len));
+//     printf("ft_strnstr: %s\n\n", ft_strnstr(big, little, len));
+
+// 	big = "Hello, world!";
+//     printf("ft_strnstr: %s\n\n", ft_strnstr(big, NULL, len));
+
+// 	little = "foo";
+//     printf("ft_strnstr: %s\n\n", ft_strnstr(NULL, little, len));
+
+//     printf("ft_strnstr: %s\n\n", ft_strnstr(NULL, NULL, len));
 
 //     return 0;
 // }
