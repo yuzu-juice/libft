@@ -3,44 +3,78 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 17:39:57 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/19 19:48:38 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *buf, int ch, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*s;
+	unsigned char	*p;
+	size_t			i;
 
-	s = buf;
-	while (n > 0)
+	if (s == NULL)
+		return (s);
+	p = s;
+	i = 0;
+	while (i < n)
 	{
-		*s = ch;
-		s++;
-		n--;
+		p[i] = c;
+		i++;
 	}
-	return (buf);
+	return (s);
 }
 
 // #include <string.h>
 // #include <stdio.h>
 // int	main()
 // {
+// 	//////////////////////////////////////////////
 //     char str1[] = "0123456789";
+// 	char *ret = (char *)memset(str1, '*', 5);
+
+// 	printf("memset: ");
+// 	for (int i = 0; i < strlen(str1); ++i) {
+// 		    printf("%c", ret[i]);
+// 	}
+// 	printf("\n");
+
 //     char str2[] = "0123456789";
+// 	ret = (char *)ft_memset(str1, '*', 5);
 
-//     printf("memset: %s\n", (char *)memset(str1, '*', 5));
-//     printf("ft_memset: %s\n", (char *)ft_memset(str2, '*', 5));
+// 	printf("ft_memset: ");
+// 	for (int i = 0; i < strlen(str1); ++i) {
+// 		    printf("%c", ret[i]);
+// 	}
+// 	printf("\n");
+// 	//////////////////////////////////////////////
 
-//     char *null_str1 = NULL;
-//     char *null_str2 = NULL;
+// 	//////////////////////////////////////////////
+// 	char str3[] = "0123456789";
+// 	ret = (char *)memset(str3, 1000, 5);
 
-//     printf("memset with NULL: %p\n", memset(null_str1, '*', 5));
-//     printf("ft_memset with NULL: %p\n", ft_memset(null_str2, '*', 5));
+// 	printf("memset: ");
+// 	for (int i = 0; i < strlen(str3); ++i) {
+// 		    printf("%c", ret[i]);
+// 	}
+// 	printf("\n");
+
+//     char str4[] = "0123456789";
+// 	ret = (char *)ft_memset(str4, 1000, 5);
+
+// 	printf("ft_memset: ");
+// 	for (int i = 0; i < strlen(str1); ++i) {
+// 		    printf("%c", ret[i]);
+// 	}
+// 	printf("\n");
+// 	//////////////////////////////////////////////
+
+//     // printf("memset with NULL: %p\n", memset(NULL, '*', 5));
+//     printf("ft_memset: %p\n", ft_memset(NULL, '*', 5));
 
 // 	return 0;
 // }
