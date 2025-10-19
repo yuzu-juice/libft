@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 20:40:49 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/19 21:51:00 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,4 +74,6 @@ static int	check_overflow(int sign, long l, char next)
 // 	const char *s5 = NULL;
 // 	printf("%d\n", atoi(s5));
 // 	printf("%d\n", ft_atoi(s5));
+
+// 	return 0;
 // }
