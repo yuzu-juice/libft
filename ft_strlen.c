@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:27:33 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/19 19:02:20 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 
+	if (s == NULL)
+		return (0);
 	i = 0;
 	while (s[i])
 		i++;
@@ -26,6 +28,8 @@ size_t	ft_strlen(const char *s)
 // #include <stdio.h>
 // int	main()
 // {
-// 	printf("%lu, %lu\n", strlen("abc"), ft_strlen("abc"));
+// 	printf("%lu, %lu\n", strlen("abcdef"), ft_strlen("abcdef"));
 // 	printf("%lu, %lu\n", strlen(""), ft_strlen(""));
+// 	printf("%lu\n", ft_strlen(NULL));
+// 	// printf("%lu, %lu\n", strlen(NULL), ft_strlen(NULL));
 // }
