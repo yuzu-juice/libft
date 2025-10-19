@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 17:51:46 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/19 21:19:39 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	size_t	i;
-	char	*str;
+	size_t		i;
+	const char	*str;
 
+	if (s == NULL)
+		return (NULL);
 	i = 0;
-	str = (char *)s;
-	while (1)
+	str = s;
+	while (true)
 	{
 		if (str[i] == (char)c)
-			return (&str[i]);
+			return ((char *)&str[i]);
 		if (str[i] == '\0')
 			return (NULL);
 		i++;
@@ -37,11 +39,9 @@ char	*ft_strchr(const char *s, int c)
 // 	printf("%p, %p\n", strchr(s, c), ft_strchr(s, c));
 
 // 	const char s1[] = "";
-// 	c = '\0';
+// 	c = 0;
 // 	printf("%p, %p\n", strchr(s1, c), ft_strchr(s1, c));
 
-// 	const char *s2 = NULL;
 // 	c = '\0';
-// 	printf("%p\n", strchr(s2, c));
-// 	printf("%p\n", ft_strchr(s2, c));
+// 	printf("%p\n", ft_strchr(NULL, c));
 // }

@@ -6,21 +6,19 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 11:11:26 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 20:43:08 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/19 21:19:32 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# define FALSE 0
-# define TRUE 1
-
 # include <unistd.h>
 # include <stdlib.h>
 # include <limits.h>
 # include <stdarg.h>
 # include <stdint.h>
+# include <stdbool.h>
 
 // Part1
 int				ft_isspace(char c);
