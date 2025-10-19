@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:27:33 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 18:40:15 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/19 18:56:12 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,7 @@ static int ft_isupper(int c)
 
 static int ft_islower(int c)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c);
-	return (0);
+	return (c >= 'a' && c <= 'z');
 }
 
 // #include <ctype.h>
