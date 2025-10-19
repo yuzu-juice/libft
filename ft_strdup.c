@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 01:19:46 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/19 21:55:55 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s)
 	size_t	s_len;
 
 	s_len = ft_strlen(s);
-	ptr = (char *)malloc(s_len + 1);
+	ptr = (char *)ft_calloc(s_len + 1, sizeof(char *));
 	if (!ptr)
 		return (NULL);
 	ft_memcpy(ptr, s, s_len);
@@ -31,16 +31,14 @@ char	*ft_strdup(const char *s)
 // int main()
 // {
 // 	char	*str = "Hello, World!";
-// 	printf("ft_strdup: %s\n", ft_strdup(str));
 // 	printf("strdup: %s\n", strdup(str));
+// 	printf("ft_strdup: %s\n\n", ft_strdup(str));
 
 // 	char	*str1 = "";
-// 	printf("ft_strdup: %s\n", ft_strdup(str1));
 // 	printf("strdup: %s\n", strdup(str1));
+// 	printf("ft_strdup: %s\n\n", ft_strdup(str1));
 
-// 	char	*str2 = NULL;
-// 	printf("ft_strdup: %s\n", ft_strdup(str2));
-// 	printf("strdup: %s\n", strdup(str2));
+// 	printf("ft_strdup: %s\n", ft_strdup(NULL));
 
 // 	return (0);
 // }
