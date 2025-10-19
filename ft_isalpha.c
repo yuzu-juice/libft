@@ -3,19 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:27:33 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/19 18:40:15 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int ft_isupper(int c);
+static int ft_islower(int c);
+
 int	ft_isalpha(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
+	return (ft_isupper(c) || ft_islower(c));
+}
+
+static int ft_isupper(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		return (c);
+	return (0);
+}
+
+static int ft_islower(int c)
+{
+	if (c >= 'a' && c <= 'z')
+		return (c);
 	return (0);
 }
 
