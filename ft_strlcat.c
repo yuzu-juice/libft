@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 19:49:28 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/19 21:10:21 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	char		*d;
 	const char	*s;
@@ -25,9 +25,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
 	i = 0;
-	if (dstsize <= dst_len)
-		return (dstsize + src_len);
-	while (s[i] && (dst_len + i) < (dstsize - 1))
+	if (size <= dst_len || dst == NULL || src == NULL)
+		return (dst_len + src_len);
+	while (s[i] && (dst_len + i) < size - 1)
 	{
 		d[dst_len + i] = s[i];
 		i++;
@@ -39,21 +39,21 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 // #include <string.h>
 // #include <stdio.h>
 // int main() {
-// 	char dest1[9] = "Hello";
-// 	const char *src1 = " World";
+// 	char dst1[9] = "Hello";
+// 	const char src[] = " World";
 
-// 	printf("strlcat\n");
-// 	printf("Before: %s\n", dest1);
-// 	size_t result1 = strlcat(dest1, src1, sizeof(dest1));
-// 	printf("After: %s\n", dest1);
-// 	printf("Total length: %zu\n\n", result1);
+// 	size_t ret = ft_strlcat(dst1, src, 9);
+// 	printf("%zu, %s\n", ret, dst1);
 
-// 	char dest2[9] = "Hello";
-// 	const char *src2 = " World";
+// 	char	dst2[9] = "Hello";
+// 	ret = ft_strlcat(dst2, src, 9);
+// 	printf("%zu, %s\n", ret, dst2);
 
-// 	printf("ft_strlcat\n");
-// 	printf("Before: %s\n", dest2);
-// 	size_t result2 = ft_strlcat(dest2, src2, sizeof(dest2));
-// 	printf("After: %s\n", dest2);
-// 	printf("Total length: %zu\n", result2);
+// 	char	dst3[15] = "Hello";
+// 	ret = ft_strlcat(dst3, src, 9);
+// 	printf("%zu, %s\n", ret, dst3);
+
+// 	char	dst4[9] = "Hello";
+// 	ret = ft_strlcat(dst4, NULL, 9);
+// 	printf("%zu, %s\n", ret, dst4);
 // }
