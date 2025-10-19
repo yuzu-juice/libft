@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:27:33 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 18:46:29 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/19 18:47:09 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@ int	ft_isdigit(int c)
 	return (0);
 }
 
-// #include <ctype.h>
-// #include <stdio.h>
+#include <ctype.h>
+#include <stdio.h>
 
-// int	main()
-// {
-// 	printf("isdigit: %d, ft_isdigit: %d\n", isdigit('a'), ft_isdigit('a'));
-// 	printf("isdigit: %d, ft_isdigit: %d\n", isdigit('A'), ft_isdigit('A'));
-// 	printf("isdigit: %d, ft_isdigit: %d\n", isdigit('1'), ft_isdigit('1'));
-// 	printf("isdigit: %d, ft_isdigit: %d\n", isdigit(0), ft_isdigit(0));
-// }
+int	main()
+{
+	printf("isdigit: %d, ft_isdigit: %d\n", isdigit('a'), ft_isdigit('a'));
+	printf("isdigit: %d, ft_isdigit: %d\n", isdigit('A'), ft_isdigit('A'));
+	printf("isdigit: %d, ft_isdigit: %d\n", isdigit('1'), ft_isdigit('1'));
+	printf("isdigit: %d, ft_isdigit: %d\n", isdigit(' '), ft_isdigit(' '));
+	printf("isdigit: %d, ft_isdigit: %d\n", isdigit(0), ft_isdigit(0));
+}
