@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 17:51:46 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 21:19:39 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/19 21:22:09 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,9 @@ char	*ft_strchr(const char *s, int c)
 // int	main(){
 // 	const char s[] = "test string";
 // 	int	c = 'a';
+// 	printf("%p, %p\n", strchr(s, c), ft_strchr(s, c));
+
+// 	c = 's';
 // 	printf("%p, %p\n", strchr(s, c), ft_strchr(s, c));
 
 // 	const char s1[] = "";
