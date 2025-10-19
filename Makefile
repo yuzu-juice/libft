@@ -6,7 +6,7 @@
 #    By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 11:11:26 by takitaga          #+#    #+#              #
-#    Updated: 2025/10/19 18:47:47 by takitaga         ###   ########.fr        #
+#    Updated: 2025/10/19 18:49:38 by takitaga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME	= libft.a
 SRCS	= ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
-		# ft_isascii.c \
+		ft_isascii.c \
 		# ft_isprint.c \
 		# ft_strlen.c \
 		# ft_memset.c \
