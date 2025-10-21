@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 15:39:55 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/21 11:56:25 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,12 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
-	{
-		ft_putstr_fd("-2147483648", fd);
+	char *n_str;
+
+	n_str = ft_itoa(n);
+	if (n_str == NULL)
 		return ;
-	}
-	if (n < 0)
-	{
-		ft_putchar_fd('-', fd);
-		n *= -1;
-	}
-	if (n >= 10)
-	{
-		ft_putnbr_fd(n / 10, fd);
-	}
-	ft_putchar_fd((n % 10) + '0', fd);
+	ft_putstr_fd(n_str, fd);
 }
 
 // #include <stdio.h>
@@ -50,12 +41,10 @@ void	ft_putnbr_fd(int n, int fd)
 
 //     ft_putnbr_fd(num, fd);
 
-//     // ファイルの内容を確認するために読み取る
 //     lseek(fd, 0, SEEK_SET); // ファイルポインタを先頭に移動
 //     read(fd, buffer, 3);
-//     buffer[3] = '\0'; // 終端文字を追加
+//     buffer[3] = '\0';
 
-//     // 結果を表示
 //     printf("Written number: %s\n", buffer);
 
 //     close(fd);
