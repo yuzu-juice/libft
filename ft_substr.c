@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 10:20:48 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/21 11:22:20 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,16 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 // 	char	*str = "Hello, World!";
 // 	char	*ptr1 = ft_substr(str, 7, 5);
 // 	char	*ptr2 = ft_substr(str, 0, 5);
-// 	char	*ptr3 = ft_substr(str, 0, 13);
-// 	char	*ptr4 = ft_substr(str, 0, 14);
-// 	char	*ptr5 = ft_substr(str, 0, 15);
-// 	char	*ptr6 = ft_substr(str, 20, 16);
-// 	char	*ptr7 = ft_substr(NULL, 0, 2);
+// 	char	*ptr3 = ft_substr(str, 7, 13);
+// 	char	*ptr4 = ft_substr(str, 0, 15);
+// 	char	*ptr5 = ft_substr(str, 20, 16);
+// 	char	*ptr6 = ft_substr(NULL, 0, 2);
 // 	printf("ft_substr: %s\n", ptr1);
 // 	printf("ft_substr: %s\n", ptr2);
-// 	printf("ft_substr: %s\n", ptr3);	
+// 	printf("ft_substr: %s\n", ptr3);
 // 	printf("ft_substr: %s\n", ptr4);
 // 	printf("ft_substr: %s\n", ptr5);
 // 	printf("ft_substr: %s\n", ptr6);
-// 	printf("ft_substr: %s\n", ptr7);
+
 // 	return (0);
 // }
