@@ -6,7 +6,7 @@
 #    By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 11:11:26 by takitaga          #+#    #+#              #
-#    Updated: 2025/10/21 11:43:45 by takitaga         ###   ########.fr        #
+#    Updated: 2025/10/21 11:46:43 by takitaga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,7 +41,7 @@ SRCS	= ft_isalpha.c \
 		ft_itoa.c \
 		ft_strmapi.c \
 		ft_striteri.c \
-		# ft_putchar_fd.c \
+		ft_putchar_fd.c \
 		# ft_putstr_fd.c \
 		# ft_putendl_fd.c \
 		# ft_putnbr_fd.c  \
