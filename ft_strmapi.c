@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 15:39:55 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/21 11:43:34 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 
 	i = 0;
-	if (!s || !f)
+	if (s == NULL || f == NULL)
 		return (NULL);
 	str = ft_strdup(s);
 	if (!str)
@@ -42,7 +42,13 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 // int main()
 // {
 // 	char *s = "Hello";
-// 	char *str = ft_strmapi(s, &ft_replace_with_star);
-// 	printf("%s\n", str);
+// 	char *str1 = ft_strmapi(s, &ft_replace_with_star);
+// 	printf("%s\n", str1);
+// 	char *str2 = ft_strmapi(s, NULL);
+// 	printf("%s\n", str2);
+// 	char *str3 = ft_strmapi(NULL, &ft_replace_with_star);
+// 	printf("%s\n", str3);
+// 	char *str4 = ft_strmapi(NULL, NULL);
+// 	printf("%s\n", str4);
 // 	return (0);
 // }
