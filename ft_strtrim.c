@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 11:14:09 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/21 11:31:13 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	j;
 	size_t	s1_len;
 
-	if (!s1)
+	if (s1 == NULL)
 		return (NULL);
 	i = 0;
 	s1_len = ft_strlen(s1);
-	while (s1[i])
+	while (s1[i] != '\0')
 	{
 		if (check_set(s1[i], set))
 			i++;
@@ -47,9 +47,9 @@ static int	check_set(char const c, char const *set)
 	size_t	i;
 
 	i = 0;
-	if (!set)
+	if (set == NULL)
 		return (0);
-	while (set[i])
+	while (set[i] != '\0')
 	{
 		if (c == set[i])
 			return (1);
@@ -69,14 +69,12 @@ static int	check_set(char const c, char const *set)
 //     printf("ft_strtrim: %s\n", ptr1);
 //     free(ptr1);
 
-//     // 空文字列のテストケース
 //     char *str2 = "";
 //     char *set2 = "He!";
 //     char *ptr2 = ft_strtrim(str2, set2);
 //     printf("ft_strtrim (empty string): %s\n", ptr2);
 //     free(ptr2);
 
-//     // NULLのテストケース
 //     char *ptr3 = ft_strtrim(NULL, set1);
 //     printf("ft_strtrim (NULL string): %s\n", ptr3);
 

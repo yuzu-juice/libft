@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 19:24:30 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 21:06:35 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/21 11:30:48 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,28 +46,28 @@ static size_t	ft_strncpy(char *dst, const char *src, size_t size)
 	return (ft_strlen(src));
 }
 
-#include <string.h>
-#include <stdio.h>
-int	main()
-{
-	char	src[] = "01234";
-	char	dst1[] = "9876543210";
+// #include <string.h>
+// #include <stdio.h>
+// int	main()
+// {
+// 	char	src[] = "01234";
+// 	char	dst1[] = "9876543210";
 
-	size_t ret = ft_strlcpy(dst1, src, strlen(src));
-	printf("%zu, %s\n", ret, dst1);
+// 	size_t ret = ft_strlcpy(dst1, src, strlen(src));
+// 	printf("%zu, %s\n", ret, dst1);
 
-	char	dst2[] = "9876543210";
-	ret = ft_strlcpy(dst2, src, 0);
-	printf("%zu, %s\n", ret, dst2);
+// 	char	dst2[] = "9876543210";
+// 	ret = ft_strlcpy(dst2, src, 0);
+// 	printf("%zu, %s\n", ret, dst2);
 
-	char	dst3[] = "9876543210";
-	ret = ft_strlcpy(dst3, src, strlen(src) + 1);
-	printf("%zu, %s\n", ret, dst3);
+// 	char	dst3[] = "9876543210";
+// 	ret = ft_strlcpy(dst3, src, strlen(src) + 1);
+// 	printf("%zu, %s\n", ret, dst3);
 
-	char	dst4[] = "9876543210";
-	ret = ft_strlcpy(dst4, NULL, 0);
-	printf("%zu, %s\n", ret, dst4);
+// 	char	dst4[] = "9876543210";
+// 	ret = ft_strlcpy(dst4, NULL, 0);
+// 	printf("%zu, %s\n", ret, dst4);
 
-	ret = ft_strlcpy(NULL, src, 0);
-	printf("%zu\n", ret);
-}
+// 	ret = ft_strlcpy(NULL, src, 0);
+// 	printf("%zu\n", ret);
+// }

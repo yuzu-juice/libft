@@ -6,7 +6,7 @@
 #    By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 11:11:26 by takitaga          #+#    #+#              #
-#    Updated: 2025/10/21 11:22:39 by takitaga         ###   ########.fr        #
+#    Updated: 2025/10/21 11:27:26 by takitaga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,7 @@ SRCS	= ft_isalpha.c \
 		ft_strdup.c \
 		ft_substr.c \
 		ft_strjoin.c \
-		# ft_strtrim.c \
+		ft_strtrim.c \
 		# ft_split.c \
 		# ft_itoa.c \
 		# ft_strmapi.c \
