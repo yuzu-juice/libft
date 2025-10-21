@@ -6,13 +6,11 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 19:24:30 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/21 11:30:48 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/21 12:40:51 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	ft_strncpy(char *dst, const char *src, size_t size);
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
@@ -32,17 +30,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	}
 	d[i] = '\0';
-	return (ft_strlen(src));
-}
-
-static size_t	ft_strncpy(char *dst, const char *src, size_t size)
-{
-	size_t	i;
-
-	i = 0;
-	if (size == 0)
-		return (ft_strlen(src));
-	ft_memmove(dst, src, size);
 	return (ft_strlen(src));
 }
 

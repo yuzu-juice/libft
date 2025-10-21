@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 11:11:26 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 21:19:32 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/21 13:25:24 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 # include <stdbool.h>
 
 // Part1
-int				ft_isspace(char c);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
@@ -59,22 +58,5 @@ void			ft_putchar_fd(char c, int fd);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putendl_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
-
-// libftprintf
-int				ft_printf(const char *fmt, ...);
-int				ft_fprintf(int fd, const char *fmt, ...);
-int				ft_println(const char *fmt, ...);
-ssize_t			ft_putchar(char c);
-ssize_t			ft_putstr(char *s);
-ssize_t			ft_putnbr(int n);
-ssize_t			ft_putnbr_ui(unsigned int u);
-ssize_t			ft_putptr(uintptr_t p);
-ssize_t			ft_puthex(unsigned long x, int is_lower);
-int				ft_isnum(char *s);
-char			ft_dec_to_lower_hex(unsigned int u);
-char			ft_dec_to_upper_hex(unsigned int u);
-
-// utils
-int				ft_pow(int base, int exp);
 
 #endif

@@ -6,7 +6,7 @@
 #    By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/04 11:11:26 by takitaga          #+#    #+#              #
-#    Updated: 2025/10/21 11:56:30 by takitaga         ###   ########.fr        #
+#    Updated: 2025/10/21 12:56:50 by takitaga         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,22 +44,20 @@ SRCS	= ft_isalpha.c \
 		ft_putchar_fd.c \
 		ft_putstr_fd.c \
 		ft_putendl_fd.c \
-		ft_putnbr_fd.c  \
-		# ft_putchar.c \
-		# ft_putstr.c \
-		# ft_putnbr.c \
-		# ft_putnbr_ui.c \
-		# ft_putptr.c \
-		# ft_puthex.c \
-		# ft_dec_to_hex.c \
-		# ft_isnum.c \
-		# ft_atoi.c \
-		# ft_isspace.c \
-		# ft_pow.c \
-		# ft_atof.c
+		ft_putnbr_fd.c
+
+SRCS_BONUS	= ft_lstnew_bonus.c \
+			ft_lstadd_front_bonus.c \
+			ft_lstsize_bonus.c \
+			ft_lstlast_bonus.c \
+			ft_lstadd_back_bonus.c \
+			ft_lstdelone_bonus.c \
+			ft_lstclear_bonus.c \
+			ft_lstiter_bonus.c \
+			ft_lstmap_bonus.c
 
 OBJS	= $(SRCS:.c=.o)
-HEADERS	= libft.h
+OBJS_BONUS	= $(SRCS_BONUS:.c=.o)
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror -std=c99
 
@@ -69,17 +67,19 @@ $(NAME): $(OBJS)
 	@ar rcs $@ $(OBJS)
 	@ranlib $@
 
-%.o: %.c $(HEADERS)
+%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS_BONUS)
 
 fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
+bonus: $(OBJS) $(OBJS_BONUS)
+	@ar rcs $@ $(OBJS) $(OBJS_BONUS)
+	@ranlib $@
 
-
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus

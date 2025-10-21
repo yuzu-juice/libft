@@ -6,13 +6,14 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 20:40:49 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 21:51:00 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/21 13:25:09 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 static int	check_overflow(int sign, long l, char next);
+static int	ft_isspace(const char c);
 
 int	ft_atoi(const char *nptr)
 {
@@ -52,6 +53,14 @@ static int	check_overflow(int sign, long l, char next)
 		if (LONG_MIN / -10 < l
 			|| (LONG_MIN / -10 == l && LONG_MIN % -10 * -1 < next - '0'))
 			return (-1);
+	return (0);
+}
+
+static int	ft_isspace(const char c)
+{
+	if (c == ' ' || c == '\f' || c == '\n'
+		|| c == '\r' || c == '\t' || c == '\v')
+		return (1);
 	return (0);
 }
 
