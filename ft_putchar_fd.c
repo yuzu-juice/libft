@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 15:39:55 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/21 11:48:27 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/21 11:49:33 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ void	ft_putchar_fd(char c, int fd)
 //     ft_putchar_fd(test_char, fd);
 
 //     lseek(fd, 0, SEEK_SET); // ファイルポインタを先頭に移動
-//     read(fd, buf, 1); // 1バイト読み取る
-//     buf[1] = '\0'; // 終端文字を追加
+//     read(fd, buf, 1);
+//     buf[1] = '\0';
 
 //     printf("Written string: %s\n", buf);
 
