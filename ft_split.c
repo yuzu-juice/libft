@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 14:58:43 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/21 11:38:50 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/21 11:44:30 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	**ft_split(char const *s, char c)
 	result = (char **)ft_calloc(sizeof(char *), count_words(s, c) + 1);
 	if (result == NULL)
 		return (NULL);
-	while (s[i] != '\0')
+	while (s[i])
 	{
 		while (s[i] == c)
 			i++;

@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 11:14:09 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/21 11:31:13 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/21 11:44:24 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	i = 0;
 	s1_len = ft_strlen(s1);
-	while (s1[i] != '\0')
+	while (s1[i])
 	{
 		if (check_set(s1[i], set))
 			i++;
@@ -49,7 +49,7 @@ static int	check_set(char const c, char const *set)
 	i = 0;
 	if (set == NULL)
 		return (0);
-	while (set[i] != '\0')
+	while (set[i])
 	{
 		if (c == set[i])
 			return (1);

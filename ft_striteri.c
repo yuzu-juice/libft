@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 15:39:55 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/21 11:46:32 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	size_t	i;
 
 	i = 0;
-	if (!s || !f)
+	if (s == NULL || f == NULL)
 		return ;
 	while (s[i])
 	{
@@ -38,8 +38,18 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 
 // int main()
 // {
-// 	char s[] = "Hello";
-// 	ft_striteri(s, &ft_replace_with_star);
-// 	printf("%s\n", s);
+// 	char str1[] = "Hello";
+// 	ft_striteri(str1, &ft_replace_with_star);
+// 	printf("%s\n", str1);
+
+// 	char str2[] = "Hello";
+// 	ft_striteri(str2, NULL);
+// 	printf("%s\n", str2);
+
+// 	ft_striteri(NULL, &ft_replace_with_star);
+// 	printf("%s\n", NULL);
+
+// 	ft_striteri(NULL, NULL);
+// 	printf("%s\n", NULL);
 // 	return (0);
 // }
