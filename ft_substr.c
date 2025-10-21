@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 10:20:48 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/21 11:24:39 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/21 11:33:00 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 		return (ft_strdup(""));
 	if (s_len < start + len)
 		len = s_len - start;
-	ptr = (char *)ft_calloc(sizeof(char *), len + 1);
+	ptr = (char *)ft_calloc(sizeof(char), len + 1);
 	if (ptr == NULL)
 		return (NULL);
 	ft_memcpy(ptr, s + start, len);

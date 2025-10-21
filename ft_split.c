@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: takitaga  <takitaga@student.42tokyo.>      +#+  +:+       +#+        */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 14:58:43 by takitaga          #+#    #+#             */
-/*   Updated: 2024/05/19 13:50:43 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/21 11:38:50 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,14 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 	size_t	result_i;
 
+	if (s == NULL)
+		return (NULL);
 	i = 0;
 	result_i = 0;
-	result = (char **)malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (!result || !s)
+	result = (char **)ft_calloc(sizeof(char *), count_words(s, c) + 1);
+	if (result == NULL)
 		return (NULL);
-	while (s[i])
+	while (s[i] != '\0')
 	{
 		while (s[i] == c)
 			i++;
@@ -75,7 +77,7 @@ static char	*get_until_c(char const *s, char c)
 
 	i = 0;
 	tmp = &s[i];
-	while (1)
+	while (true)
 	{
 		if (s[i] == c || s[i] == '\0')
 			break ;
@@ -107,12 +109,12 @@ static void	*free_result(char **result, size_t result_i)
 //         "SingleWord",
 //         "    ",
 //         "",
-//         NULL // 終端
+//         NULL
 //     };
 
 //     for (size_t j = 0; test_cases[j] != NULL; j++) {
 //         printf("Test case %zu: \"%s\"\n", j + 1, test_cases[j]);
-//         test = ft_split(test_cases[j], ' '); // スペースで区切り
+//         test = ft_split(test_cases[j], ' ');
 //         if (test) {
 //             for (i = 0; test[i]; i++) {
 //                 printf("%zu: %s\n", i, test[i]);
