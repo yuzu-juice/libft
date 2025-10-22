@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:46:16 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 20:17:21 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/22 15:44:57 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,11 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
-	size_t				i;
 
 	if (n == 0 || dest == NULL || src == NULL || dest == src)
 		return (dest);
 	d = dest;
 	s = src;
-	i = 0;
 	if (d < s)
 		ft_memcpy(d, s, n);
 	else if (d > s)
