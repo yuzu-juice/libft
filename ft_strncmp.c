@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 19:54:58 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 21:38:00 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/22 15:40:23 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	i;
-
 
 	i = 0;
 	if (n == 0)

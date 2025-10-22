@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 19:46:20 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 21:24:08 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/22 15:43:15 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	size_t	i;
+	size_t		i;
 	const char	*str;
 	char		*ret_val;
 

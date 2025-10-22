@@ -6,28 +6,26 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:27:33 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/21 14:45:30 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/22 15:42:22 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int ft_isupper(int c);
-static int ft_islower(int c);
+static int	ft_isupper(int c);
+static int	ft_islower(int c);
 
-int	ft_isalpha(int c)
+int	t_isalpha(int c)
 {
 	return (ft_isupper(c) || ft_islower(c));
 }
 
-static int ft_isupper(int c)
+static int	ft_isupper(int c)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (c);
-	return (0);
+	return (c >= 'A' && c <= 'Z');
 }
 
-static int ft_islower(int c)
+static int	ft_islower(int c)
 {
 	return (c >= 'a' && c <= 'z');
 }
@@ -37,9 +35,14 @@ static int ft_islower(int c)
 
 // int	main()
 // {
-// 	printf("isalpha: %d, ft_isalpha: %d\n", isalpha('a'), ft_isalpha('a'));
-// 	printf("isalpha: %d, ft_isalpha: %d\n", isalpha('A'), ft_isalpha('A'));
-// 	printf("isalpha: %d, ft_isalpha: %d\n", isalpha('1'), ft_isalpha('1'));
-// 	printf("isalpha: %d, ft_isalpha: %d\n", isalpha(' '), ft_isalpha(' '));
-// 	printf("isalpha: %d, ft_isalpha: %d\n", isalpha(0), ft_isalpha(0));
+// 	printf("isalpha: %d, ft_isalpha: %d\n",
+// 			isalpha('a'), ft_isalpha('a'));
+// 	printf("isalpha: %d, ft_isalpha: %d\n",
+// 			isalpha('A'), ft_isalpha('A'));
+// 	printf("isalpha: %d, ft_isalpha: %d\n",
+// 			isalpha('1'), ft_isalpha('1'));
+// 	printf("isalpha: %d, ft_isalpha: %d\n",
+// 			isalpha(' '), ft_isalpha(' '));
+// 	printf("isalpha: %d, ft_isalpha: %d\n",
+// 			isalpha(0), ft_isalpha(0));
 // }

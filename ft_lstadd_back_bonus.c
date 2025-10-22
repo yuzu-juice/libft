@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/30 18:46:16 by takitaga          #+#    #+#             */
+/*   Updated: 2025/10/22 15:44:06 by takitaga         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft_bonus.h"
 
 void	ft_lstadd_back(t_list **lst, t_list *new)
@@ -9,7 +21,6 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	tmp = ft_lstlast(*lst);
 	tmp->next = new;
 }
-
 
 // #include <stdio.h>
 // int main()

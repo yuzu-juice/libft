@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/30 18:46:16 by takitaga          #+#    #+#             */
+/*   Updated: 2025/10/22 15:43:44 by takitaga         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft_bonus.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
@@ -6,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*next;
 
 	if (lst == NULL || *lst == NULL)
-        return ;
+		return ;
 	current = *lst;
 	while (current)
 	{

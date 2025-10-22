@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 19:24:30 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/21 12:40:51 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/22 15:44:02 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 
 	if (size == 0 || dst == NULL)
 		return (ft_strlen(src));
-
 	d = dst;
 	s = src;
 	i = 0;

@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/04/30 18:46:16 by takitaga          #+#    #+#             */
+/*   Updated: 2025/10/22 15:43:05 by takitaga         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft_bonus.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	t_list	*tmp;
 
@@ -26,7 +38,9 @@ t_list *ft_lstlast(t_list *lst)
 // 	new->next = NULL;
 // 	ft_lstadd_front(&first, new);
 
-// 	printf("%s, %p\n", (char *)ft_lstlast(first)->content, ft_lstlast(first)->next);
+// 	printf("%s, %p\n",
+// 			(char *)ft_lstlast(first)->content,
+// 			ft_lstlast(first)->next);
 
 // 	return 0;
 // }
