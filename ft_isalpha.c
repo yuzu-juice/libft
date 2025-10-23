@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:27:33 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/22 15:42:22 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/24 00:38:58 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	ft_isupper(int c);
 static int	ft_islower(int c);
 
-int	t_isalpha(int c)
+int	ft_isalpha(int c)
 {
 	return (ft_isupper(c) || ft_islower(c));
 }
