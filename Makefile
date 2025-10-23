@@ -79,7 +79,7 @@ fclean: clean
 re: fclean all
 
 bonus: $(OBJS) $(OBJS_BONUS)
-	@ar rcs $@ $(OBJS) $(OBJS_BONUS)
-	@ranlib $@
+	@ar rcs $(NAME) $(OBJS) $(OBJS_BONUS)
+	@ranlib $(NAME)
 
 .PHONY: all clean fclean re bonus
