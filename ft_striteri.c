@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 15:39:55 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/21 11:46:32 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:03:54 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		while (s[i])
 		{
 			f(i, &s[i]);
-			i++;
+			++i;
 		}
 	}
 }

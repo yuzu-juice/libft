@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 15:39:55 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/21 11:50:21 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:03:27 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	ft_putstr_fd(char *s, int fd)
 	while (s[i])
 	{
 		ft_putchar_fd(s[i], fd);
-		i++;
+		++i;
 	}
 }
 

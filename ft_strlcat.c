@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 19:49:28 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 21:11:33 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:03:58 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	while (s[i] && (dst_len + i) < size - 1)
 	{
 		d[dst_len + i] = s[i];
-		i++;
+		++i;
 	}
 	d[dst_len + i] = '\0';
 	return (dst_len + src_len);

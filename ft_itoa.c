@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/12 15:39:55 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/21 11:41:53 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:03:09 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_itoa(int n)
 	digits = get_digits(n);
 	if (n < 0)
 	{
-		digits++;
+		++digits;
 		n *= -1;
 	}
 	str = (char *)ft_calloc(digits + 1, sizeof(char));
@@ -54,7 +54,7 @@ static size_t	get_digits(int n)
 	while (n > 0)
 	{
 		n /= 10;
-		i++;
+		++i;
 	}
 	return (i);
 }

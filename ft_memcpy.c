@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:39:08 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 20:08:13 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:03:21 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	while (i < n)
 	{
 		d[i] = s[i];
-		i++;
+		++i;
 	}
 	return (dest);
 }

@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:46:16 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/22 15:40:03 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:01:01 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*ret;
 	t_list	*new;
 
+	if (f == NULL || del == NULL)
+		return (NULL);
 	ret = ft_lstnew(f(lst->content));
 	if (ret == NULL)
 		return (NULL);

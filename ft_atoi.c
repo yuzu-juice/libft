@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 20:40:49 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/29 16:56:44 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:02:59 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_atoi(const char *nptr)
 		if (check_overflow(sign, ret_value, nptr[i]) == -1)
 			return ((int)LONG_MIN);
 		ret_value = ret_value * 10 + (long)(nptr[i] - '0');
-		i++;
+		++i;
 	}
 	return ((int)(sign * ret_value));
 }
@@ -68,7 +68,7 @@ static int	ft_isspace(const char c)
 static void	skip_spaces(const char *nptr, size_t *i)
 {
 	while (ft_isspace(nptr[*i]))
-		i++;
+		++i;
 }
 
 static int	parse_sign(const char *nptr, size_t *i)
@@ -77,7 +77,7 @@ static int	parse_sign(const char *nptr, size_t *i)
 	{
 		if (nptr[*i] == '-')
 		{
-			i++;
+			++i;
 			return (-1);
 		}
 	}

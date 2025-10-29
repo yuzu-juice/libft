@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 17:39:57 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 19:48:38 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:03:24 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	while (i < n)
 	{
 		p[i] = c;
-		i++;
+		++i;
 	}
 	return (s);
 }

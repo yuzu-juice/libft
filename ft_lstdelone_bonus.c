@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:46:16 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/22 15:39:53 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/29 16:58:51 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
+	if (del == NULL)
+		return ;
 	del(lst->content);
 	free(lst);
 }

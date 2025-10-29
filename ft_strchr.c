@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 17:51:46 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 21:22:09 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:03:51 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)&str[i]);
 		if (str[i] == '\0')
 			return (NULL);
-		i++;
+		++i;
 	}
 }
 

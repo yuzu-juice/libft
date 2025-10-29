@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 14:58:43 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/21 11:44:30 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:03:47 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,14 @@ char	**ft_split(char const *s, char c)
 	while (s[i])
 	{
 		while (s[i] == c)
-			i++;
+			++i;
 		if (s[i] == '\0')
 			break ;
 		result[result_i] = get_until_c(&s[i], c);
 		if (result[result_i] == NULL)
 			return (free_result(result, result_i));
 		i += ft_strlen(result[result_i]);
-		result_i++;
+		++result_i;
 	}
 	result[result_i] = NULL;
 	return (result);
@@ -62,10 +62,10 @@ static size_t	count_words(char const *s, char c)
 			flag = 1;
 		if (flag && s[i] != c)
 		{
-			count++;
+			++count;
 			flag = 0;
 		}
-		i++;
+		++i;
 	}
 	return (count);
 }
@@ -81,7 +81,7 @@ static char	*get_until_c(char const *s, char c)
 	{
 		if (s[i] == c || s[i] == '\0')
 			break ;
-		i++;
+		++i;
 	}
 	return (ft_substr(tmp, 0, i));
 }

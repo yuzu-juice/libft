@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 19:27:15 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 21:46:20 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:03:17 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	{
 		if (p1[i] != p2[i])
 			return (p1[i] - p2[i]);
-		i++;
+		++i;
 	}
 	return (0);
 }

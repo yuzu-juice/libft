@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:46:16 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/22 15:39:57 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:00:25 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*tmp;
 
+	if (f == NULL)
+		return ;
 	if (lst == NULL)
 		return ;
 	tmp = lst;

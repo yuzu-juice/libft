@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 19:27:18 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 21:40:39 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:03:14 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (buf[i] == (const unsigned char)c)
 			return ((void *)&buf[i]);
-		i++;
+		++i;
 	}
 	return (NULL);
 }

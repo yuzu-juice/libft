@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/04 11:12:09 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/19 21:50:08 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:04:19 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	{
 		if (ft_strncmp(&big[i], little, little_len) == 0)
 			return ((char *)&big[i]);
-		i++;
+		++i;
 	}
 	return (NULL);
 }
