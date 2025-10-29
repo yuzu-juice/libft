@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/03 20:40:49 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/21 13:25:09 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/29 16:56:44 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 static int	check_overflow(int sign, long l, char next);
 static int	ft_isspace(const char c);
+static void	skip_spaces(const char *nptr, size_t *i);
+static int	parse_sign(const char *nptr, size_t *i);
 
 int	ft_atoi(const char *nptr)
 {
@@ -24,11 +26,10 @@ int	ft_atoi(const char *nptr)
 	ret_value = 0;
 	sign = 1;
 	i = 0;
-	while (ft_isspace(nptr[i]))
-		i++;
-	if (nptr[i] == '+' || nptr[i] == '-')
-		if (nptr[i++] == '-')
-			sign = -1;
+	if (nptr == NULL)
+		return (0);
+	skip_spaces(nptr, &i);
+	sign = parse_sign(nptr, &i);
 	while (nptr[i])
 	{
 		if (nptr[i] < '0' || nptr[i] > '9')
@@ -64,6 +65,25 @@ static int	ft_isspace(const char c)
 	return (0);
 }
 
+static void	skip_spaces(const char *nptr, size_t *i)
+{
+	while (ft_isspace(nptr[*i]))
+		i++;
+}
+
+static int	parse_sign(const char *nptr, size_t *i)
+{
+	if (nptr[*i] == '+' || nptr[*i] == '-')
+	{
+		if (nptr[*i] == '-')
+		{
+			i++;
+			return (-1);
+		}
+	}
+	return (1);
+}
+
 // #include <stdio.h>
 // #include <stdlib.h>
 // int main()
@@ -81,7 +101,6 @@ static int	ft_isspace(const char c)
 // 	printf("%d, %d\n", atoi(s4), ft_atoi(s4));
 
 // 	const char *s5 = NULL;
-// 	printf("%d\n", atoi(s5));
 // 	printf("%d\n", ft_atoi(s5));
 
 // 	return 0;
