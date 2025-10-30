@@ -6,7 +6,7 @@
 /*   By: takitaga <takitaga@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 18:46:16 by takitaga          #+#    #+#             */
-/*   Updated: 2025/10/22 15:40:10 by takitaga         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:23:21 by takitaga         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,9 @@ int	ft_lstsize(t_list *lst)
 	t_list	*tmp;
 	int		count;
 
-	if (lst == NULL)
-		return (0);
-	count = 1;
+	count = 0;
 	tmp = lst;
-	while (tmp->next)
+	while (tmp)
 	{
 		++count;
 		tmp = tmp->next;
